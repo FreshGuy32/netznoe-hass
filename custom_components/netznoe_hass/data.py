@@ -1,4 +1,4 @@
-"""Custom types for integration_blueprint."""
+"""Custom types for netznoe_hass."""
 
 from __future__ import annotations
 
@@ -9,17 +9,17 @@ if TYPE_CHECKING:
     from homeassistant.config_entries import ConfigEntry
     from homeassistant.loader import Integration
 
-    from .api import IntegrationBlueprintApiClient
+    from .api import NetzNoeApiClient
     from .coordinator import BlueprintDataUpdateCoordinator
 
 
-type IntegrationBlueprintConfigEntry = ConfigEntry[IntegrationBlueprintData]
+type NetzNoeConfigEntry = ConfigEntry[NetzNoeData]
 
 
 @dataclass
-class IntegrationBlueprintData:
+class NetzNoeData:
     """Data for the Blueprint integration."""
 
-    client: IntegrationBlueprintApiClient
+    client: NetzNoeApiClient
     coordinator: BlueprintDataUpdateCoordinator
     integration: Integration
