@@ -1,5 +1,5 @@
 {
-  "domain": "netznoe-hass",
+  "domain": "netznoe_hass",
   "name": "Integration blueprint",
   "codeowners": [
     "@FreshGuy32"
