@@ -1,0 +1,12 @@
+{
+  "domain": "netznoe-hass",
+  "name": "Integration blueprint",
+  "codeowners": [
+    "@FreshGuy32"
+  ],
+  "config_flow": true,
+  "documentation": "https://github.com/FreshGuy32/netznoe-hass",
+  "iot_class": "cloud_polling",
+  "issue_tracker": "https://github.com/FreshGuy32/netznoe-hass/issues",
+  "version": "0.1.0"
+}
