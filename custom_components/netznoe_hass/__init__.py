@@ -37,7 +37,7 @@ async def async_setup_entry(
         hass=hass,
         logger=LOGGER,
         name=DOMAIN,
-        update_interval=timedelta(hours=1),
+        update_interval=timedelta(days=1),
     )
     entry.runtime_data = NetzNoeData(
         client=NetzNoeApiClient(

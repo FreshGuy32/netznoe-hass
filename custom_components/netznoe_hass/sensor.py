@@ -18,8 +18,9 @@ if TYPE_CHECKING:
 ENTITY_DESCRIPTIONS = (
     SensorEntityDescription(
         key="netznoe_hass",
-        name="Integration Sensor",
-        icon="mdi:format-quote-close",
+        name="Energy Consumption",
+        icon="mdi:lightning-bolt",
+        native_unit_of_measurement="kWh",
     ),
 )
 
