@@ -84,6 +84,7 @@ class BlueprintFlowHandler(config_entries.ConfigFlow, domain=DOMAIN):
         client = NetzNoeApiClient(
             username=username,
             password=password,
+            meter_id="",
             session=async_create_clientsession(self.hass),
         )
-        await client.async_get_data()
+        await client.async_login()

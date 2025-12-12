@@ -43,6 +43,7 @@ async def async_setup_entry(
         client=NetzNoeApiClient(
             username=entry.data[CONF_USERNAME],
             password=entry.data[CONF_PASSWORD],
+            meter_id="",
             session=async_get_clientsession(hass),
         ),
         integration=async_get_loaded_integration(hass, entry.domain),

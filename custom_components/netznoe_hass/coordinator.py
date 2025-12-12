@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 
+from datetime import date
 from typing import TYPE_CHECKING, Any
 
 from homeassistant.exceptions import ConfigEntryAuthFailed
@@ -25,7 +26,9 @@ class NetzNoeDataUpdateCoordinator(DataUpdateCoordinator):
     async def _async_update_data(self) -> Any:
         """Update data via library."""
         try:
-            return await self.config_entry.runtime_data.client.async_get_data()
+            return await self.config_entry.runtime_data.client.async_get_data(
+                date.today()
+            )
         except NetzNoeApiClientAuthenticationError as exception:
             raise ConfigEntryAuthFailed(exception) from exception
         except NetzNoeApiClientError as exception:
