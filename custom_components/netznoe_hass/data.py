@@ -10,7 +10,7 @@ if TYPE_CHECKING:
     from homeassistant.loader import Integration
 
     from .api import NetzNoeApiClient
-    from .coordinator import BlueprintDataUpdateCoordinator
+    from .coordinator import NetzNoeDataUpdateCoordinator
 
 
 type NetzNoeConfigEntry = ConfigEntry[NetzNoeData]
@@ -21,5 +21,5 @@ class NetzNoeData:
     """Data for the Blueprint integration."""
 
     client: NetzNoeApiClient
-    coordinator: BlueprintDataUpdateCoordinator
+    coordinator: NetzNoeDataUpdateCoordinator
     integration: Integration

@@ -16,7 +16,7 @@ from homeassistant.loader import async_get_loaded_integration
 
 from .api import NetzNoeApiClient
 from .const import DOMAIN, LOGGER
-from .coordinator import BlueprintDataUpdateCoordinator
+from .coordinator import NetzNoeDataUpdateCoordinator
 from .data import NetzNoeData
 
 if TYPE_CHECKING:
@@ -33,7 +33,7 @@ async def async_setup_entry(
     entry: NetzNoeConfigEntry,
 ) -> bool:
     """Set up this integration using UI."""
-    coordinator = BlueprintDataUpdateCoordinator(
+    coordinator = NetzNoeDataUpdateCoordinator(
         hass=hass,
         logger=LOGGER,
         name=DOMAIN,
